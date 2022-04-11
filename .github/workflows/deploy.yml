@@ -13,6 +13,6 @@ jobs:
           PORT: ${{ secrets.PORT }}
           KEY: ${{ secrets.KEY }}
         with:
-          source: "dest/*"
+          source: "C:\Users\yffan\Documents\VScodeProject\CSE135\Digitalocean-project"
           target: "/var/www/fangblog.tk/public_html"
           strip_components: 1
