@@ -1,0 +1,23 @@
+body{
+    font: 16px;
+}
+/*header*/
+.header{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.team{
+    padding: 30px;
+    background-color: rgb(224, 224, 224);
+}
+
+/*homework section*/
+.HW{
+    margin: 10px;
+}
+.HW-lists{
+    padding: 2px;
+    background-color: rgb(224, 224, 224);
+}
