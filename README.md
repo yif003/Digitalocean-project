@@ -1,7 +1,7 @@
 # Digitalocean-project
-CSE135 webserver project
+**CSE135 webserver project**
 
-team member: Yifu Fang
+**team member:** Yifu Fang
 
 Private SSH key: -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
@@ -44,16 +44,16 @@ f63MrtlcZ6Gh+kUwAAABV5ZmZhbkBERVNLVE9QLUVWRlIxMlMBAgME
 -----END OPENSSH PRIVATE KEY-----
 
 
-Website: http://fangblog.tk
+**Website:** http://fangblog.tk
 
 
-Username/password for logging into the site:
+**Username/password for logging into the site:**
 
     username:yifu
     password:Apple007
 
 
-Github auto deploy setup:
+**Github auto deploy setup:**
 
     have our website file ready in local machine
     create a git --bare somewhere in the server, and create post-receive in /hooks which checkout the into working directory
@@ -62,18 +62,21 @@ Github auto deploy setup:
     finally git push prod main to deploy
 
 
-summary of html file compression:
+**summary of html file compression:**
 
     the html, css, js files will be compressed by mod_gzip before sending out.
 
 
-summary of removing 'server' header:
+**summary of removing 'server' header:**
 
     install "sudo apt-get install libapache2-mod-security2", and which enable modification to etc/apache2/apache2.conf
     then add seccond server signature into the file:
         <IfModule mod_security2.c>
         SecServerSignature "Supa Serva"
         </IfModule>
+
+
+**Screen shots:**
 
 
 ![alt text](./images/compression-verify.jpg)
