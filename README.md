@@ -72,11 +72,34 @@ f63MrtlcZ6Gh+kUwAAABV5ZmZhbkBERVNLVE9QLUVWRlIxMlMBAgME
     install "sudo apt-get install libapache2-mod-security2", and which enable modification to etc/apache2/apache2.conf
     then add seccond server signature into the file:
         <IfModule mod_security2.c>
-        SecServerSignature "Supa Serva"
+        SecServerSignature "CSE135 server"
         </IfModule>
 
 
 **Screen shots:**
 
 
-![alt text](./images/compression-verify.jpg)
+![](./images/initial-index.jpg)
+
+![](./images/modified-index.jpg)
+
+![](./images/validator-initial.jpg)
+
+![](./images/vhost-verify.jpg)
+
+![](./images/ssl-verify.jpg)
+
+![](./images/github-deploy.gif)
+
+![](./images/php-verification.jpg)
+
+![](./images/compression-verify.jpg)
+
+![](./images/header-verify.jpg)
+
+![](./images/error-page.jpg)
+
+![](./images/log-verification.jpg)
+
+![](./images/report-verification.jpg)
+
