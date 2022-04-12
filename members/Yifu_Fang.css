@@ -1,0 +1,21 @@
+body{
+    background-image: url("https://www.wallpaperuse.com/wallp/23-238473_m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-size: 17px;
+    color: black;
+}
+
+.main{
+    background-color: rgba(255, 255, 255, 0.649);
+    box-shadow: 10px 5px 5px rgb(0, 0, 0);
+    padding: 15px;
+    text-align: center;
+    width: 480px;
+    margin: 70px auto;
+}
+.main div p{
+    padding-top: 15px;
+    border-top: 0.5px solid rgba(67, 67, 67, 0.166);
+}
