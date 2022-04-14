@@ -1,7 +1,7 @@
 # Digitalocean-project
 **CSE135 webserver project**
 
-**team member:** Yifu Fang
+**Team Member:** Yifu Fang
 
 Private SSH key: -----BEGIN OPENSSH PRIVATE KEY-----
 b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
