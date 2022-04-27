@@ -20,4 +20,5 @@ body{
 .HW-lists{
     padding: 2px;
     background-color: rgb(224, 224, 224);
+    display: flex;
 }
