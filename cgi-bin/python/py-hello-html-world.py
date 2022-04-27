@@ -1,11 +1,16 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+from datetime import datetime
+import socket
 
-print "Content-type:text/html\r\n\r\n"
-print '<html>'
-print '<head>'
-print '<title>Hello World - First CGI Program</title>'
-print '</head>'
-print '<body>'
-print '<h2>Hello World! This is my first CGI program</h2>'
-print '</body>'
-print '</html>'
+s = datetime.now()
+d = socket.gethostbyname(socket.gethostname())
+print("Content-type: text/html\n\n")
+print("<html><head><title>Hello CGI World</title></head>")
+print("<body>")
+print("<h1 align=center>Hello HTML World</h1>\n<hr/>\n")
+
+print("Hello World<br/>\n")
+print(f"This program was generated at: {s} \n<br>")
+print("Your current IP address is:  ", d)
+ 
+print("</body></html>")
