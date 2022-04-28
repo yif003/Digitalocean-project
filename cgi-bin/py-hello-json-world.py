@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 from datetime import datetime
 import socket
 
@@ -9,5 +8,6 @@ d = socket.gethostbyname(socket.gethostname())
 print("Content-type: application/json\r\n\r\n")
 
 print("{\n\t\"message\": \"Hello World\",\n")
-print(f"\t\"date\": \"{s}\",\n")
-print("\t\"currentIP\": \"\"\n}\n")
+print(f"\t\"Time\": {s}, \n")
+
+print("\t\"currentIP\": "+ d + ',\n}\n')
