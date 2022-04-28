@@ -88,7 +88,7 @@ f63MrtlcZ6Gh+kUwAAABV5ZmZhbkBERVNLVE9QLUVWRlIxMlMBAgME
     https://fangblog.tk/cgi-bin/py-env.py
     https://fangblog.tk/cgi-bin/py-get-echo.py
     https://fangblog.tk/cgi-bin/py-post-echo.py
-    https://fangblog.tk/cgi-bin/py-general-request-echo.py
+    https://fangblog.tk/cgi-bin/py-general-echo.py
     https://fangblog.tk/python-cgiform.html
 
 **Python:**
