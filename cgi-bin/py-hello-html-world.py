@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 from datetime import datetime
-import socket
+import os
 
 s = datetime.now()
-d = socket.gethostbyname(socket.gethostname())
+d = os.environ["REMOTE_ADDR"]
 print("Content-type: text/html\n\n")
 print("<html><head><title>Hello CGI World</title></head>")
 print("<body>")

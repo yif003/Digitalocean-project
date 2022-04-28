@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 from datetime import datetime
-import socket
+import os
 
 s = datetime.now()
-d = socket.gethostbyname(socket.gethostname())
+d = os.environ["REMOTE_ADDR"]
 
 print("Content-type: application/json\r\n\r\n")
 
