@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <title>ZingGrid: Blank Grid</title>
+  <script nonce="undefined" src="https://cdn.zinggrid.com/dev/zinggrid-dev.min.js"></script>
+  <style>
+    body {
+      background: #e6e6e6;
+    }
+ 
+    zing-grid[loading] {
+      height: 456px;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+    <zing-grid caption ="static" sorter>
+        <zg-data src="https://fangblog.tk/api/static"></zg-data>
+    </zing-grid>
+
+    <zing-grid caption ="performance" sorter>
+        <zg-data src="https://fangblog.tk/api/performance"></zg-data>
+    </zing-grid>
+ 
+  <script>
+    // window:load event for Javascript to run after HTML
+    // because this Javascript is injected into the document head
+    window.addEventListener('load', () => {
+      // Javascript code to execute after DOM content
+ 
+    });
+  </script>
+</body>
+ 
+</html>

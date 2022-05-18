@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset="utf-8">
+  <title>ZingSoft Demo</title>
+  <script nonce="undefined" src="https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+ 
+<body>
+  <div id='myChart'></div>
+  <div id='myChart2'></div>
+  <div id='myChart3'></div>
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    fetch("db.json")
+    .then(response => response.json())
+    .then(json => {
+        var myConfig = {
+        "type": "bar",
+        "plot": {
+            "alpha": 0.7,
+            "border-width": 2,
+            "border-color": "black",
+            "border-radius-top-left": 5,
+            "border-radius-top-right": 5,
+            "hoverState": {
+            "backgroundColor": "#909090"
+            }
+        },
+        "series": [{
+            "values": [json.performance[0].loadTime, json.activity[0].breakTime],
+            },
+            {
+            "values": [json.performance[1].loadTime, json.activity[1].breakTime],
+            },
+        ]
+        }
+        var myConfig2 = {
+        type: "pie",
+        plot: {
+            borderColor: "#2B313B",
+            borderWidth: 5,
+            // slice: 90,
+            valueBox: {
+            placement: 'out',
+            text: '%t\n%npv%',
+            fontFamily: "Open Sans"
+            },
+            tooltip: {
+            fontSize: '18',
+            fontFamily: "Open Sans",
+            padding: "5 10",
+            text: "%npv%"
+            },
+            animation: {
+            effect: 2,
+            method: 5,
+            speed: 900,
+            sequence: 1,
+            delay: 3000
+            }
+        },
+        source: {
+            text: 'gs.statcounter.com',
+            fontColor: "#8e99a9",
+            fontFamily: "Open Sans"
+        },
+        title: {
+            fontColor: "#8e99a9",
+            text: 'mouse click percentage',
+            align: "left",
+            offsetX: 10,
+            fontFamily: "Open Sans",
+            fontSize: 25
+        },
+        subtitle: {
+            offsetX: 10,
+            offsetY: 10,
+            fontColor: "#8e99a9",
+            fontFamily: "Open Sans",
+            fontSize: "16",
+            align: "left"
+        },
+        plotarea: {
+            margin: "20 0 0 0"
+        },
+        series: [{
+            values: [json.activity[0].mouseClicks.length],
+            text: "mouse click times user 1",
+            backgroundColor: '#50ADF5',
+            },
+            {
+            values: [json.activity[1].mouseClicks.length],
+            text: "mouse click user 2",
+            backgroundColor: '#FF7965',
+            detached: true
+            }
+        ]
+        };
+        var myConfig3 = {
+        "type": "line",
+        "utc": true,
+        "title": {
+            "text": "mouse position tracking",
+            "font-size": "24px",
+            "adjust-layout": true
+        },
+ 
+     
+        "plot": {
+            "highlight": true,
+            "tooltip-text": "%t views: %v<br>%k",
+            "shadow": 0,
+            "line-width": "2px",
+            "marker": {
+            "type": "dot",
+            "size": 3
+            },
+            "highlight-state": {
+            "line-width": 3
+            },
+        },
+        "series": [
+            {
+            "values": json.activity[0].mousePosition[0],
+            "text": "user 1 mouse track",
+            "line-color": "#009872",
+            "legend-item": {
+                "background-color": "#009872",
+                "borderRadius": 5,
+                "font-color": "white"
+            },
+            "marker": {
+                "background-color": "#009872",
+                "border-width": 1,
+                "shadow": 0,
+                "border-color": "#69f2d0"
+            },
+            "highlight-marker": {
+                "size": 6,
+                "background-color": "#009872",
+            }
+            },
+            {
+            "values": json.activity[1].mousePosition[0],
+            "text": "Support",
+            "line-color": "#da534d",
+            "legend-item": {
+                "background-color": "#da534d",
+                "borderRadius": 5,
+                "font-color": "white"
+            },
+            "legend-marker": {
+                "visible": false
+            },
+            "marker": {
+                "background-color": "#da534d",
+                "border-width": 1,
+                "shadow": 0,
+                "border-color": "#faa39f"
+            },
+            "highlight-marker": {
+                "size": 6,
+                "background-color": "#da534d",
+            }
+            }
+        ]
+        };
+        
+        
+        zingchart.render({
+        id: 'myChart',
+        data: myConfig,
+        height: 400,
+        width: '100%'
+        });
+        zingchart.render({
+        id: 'myChart2',
+        data: myConfig2,
+        height: 400,
+        width: '100%'
+        });
+        zingchart.render({
+        id: 'myChart3',
+        data: myConfig3,
+        height: 400,
+        width: '100%'
+        });
+    });
+  </script>
+</body>
+ 
+</html>
