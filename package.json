@@ -1,0 +1,24 @@
+{
+  "name": "public_html",
+  "version": "1.0.0",
+  "description": "**CSE135 webserver project**",
+  "main": "collector.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yif003/Digitalocean-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yif003/Digitalocean-project/issues"
+  },
+  "homepage": "https://github.com/yif003/Digitalocean-project#readme",
+  "devDependencies": {
+    "json-server": "^0.17.0"
+  }
+}
