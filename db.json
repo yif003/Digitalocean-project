@@ -1,5 +1,10 @@
 {
-  "static": [],
+  "static": [
+    {
+      "Session": "42ndrtcqfst85cufec7k8w",
+      "id": 2
+    }
+  ],
   "performance": [],
   "activity": [],
   "sessions": [
@@ -14,6 +19,10 @@
     {
       "SessionID": "4ia2425an2m88m5c04tgml",
       "id": 3
+    },
+    {
+      "SessionID": "dpkvtf9e7ihp2ifr27s29",
+      "id": 4
     }
   ]
 }

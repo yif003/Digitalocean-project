@@ -10,6 +10,8 @@ let agent = navigator.userAgent;
 let language = navigator.language;
 let cookieEnabled = navigator.cookieEnabled;
 let imageDisabled = noimage();
+let cssEnabled = checkDummy();
+console.log(cssEnabled);
 
 //set a cookie by name SessionID
 function setCookie() {
@@ -54,6 +56,9 @@ async function loadID(SessionID) {
     }
   }
 }
+//-----------------------------------------------------------------------------
+//static
+//-----------------------------------------------------------------------------
 function noimage()
 {
   if ((document.getElementById('flag').offsetWidth==1 
@@ -66,5 +71,14 @@ function noimage()
   else{
         return false;
   }
+}
+//check for css
+function checkDummy()
+{	
+	let val;
+	let el=document.getElementById("checkDummy");
+
+  console.log(el);
+	
 }
   
